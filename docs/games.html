@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Today's Games</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Today's Games</h1>
+  <p class="sub">Tap a team to add it to your priorities (in the order you tap). Tap again to remove it.</p>
+  <div class="row"><input id="q" type="search" placeholder="Filter by team or channel" aria-label="Filter games" style="flex:1;min-width:12em">
+    <button id="refresh" type="button">Refresh</button></div>
+  <div id="status" class="meta"></div>
+  <div id="list"></div>
+</main>
+<script type="module" src="games.js"></script>
+</body>
+</html>

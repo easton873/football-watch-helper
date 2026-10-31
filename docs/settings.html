@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Settings</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Settings</h1>
+  <p class="sub">Saved in this browser only. Each device keeps its own.</p>
+
+  <label class="field" for="add">Priority teams (highest first)</label>
+  <div class="row"><input id="add" type="text" placeholder="Abbreviation or school, e.g. BYU or Iowa State" style="flex:1;min-width:12em">
+    <button id="addbtn" type="button" class="primary">Add</button></div>
+  <p class="hint">Names must match exactly (any capitalization). Use the Games page if you're not sure of the abbreviation.</p>
+  <div class="card" style="margin-top:10px"><ol id="prio" class="list"></ol></div>
+
+  <label class="field" for="delay">Stream delay: <output id="delayout"></output> seconds</label>
+  <input id="delay" type="range" min="0" max="120" step="1">
+  <p class="hint">How far your TV stream runs behind ESPN's data. Raise it if the tracker says AD before the ad starts on screen; lower it if it's late.</p>
+
+  <label class="field" for="poll">Refresh every</label>
+  <select id="poll"><option value="3">3 seconds</option><option value="5">5 seconds</option>
+    <option value="10">10 seconds</option><option value="15">15 seconds</option></select>
+
+  <p id="saved" class="hint" role="status"></p>
+</main>
+<script type="module" src="settings.js"></script>
+</body>
+</html>

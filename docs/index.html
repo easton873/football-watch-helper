@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ad Break Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Ad Break Tracker</h1>
+  <p class="sub">Your games in priority order. Watch the highest one that isn't in an ad.</p>
+  <div id="banner"></div>
+  <div class="card scroll"><table>
+    <thead><tr><th scope="col">#</th><th scope="col">Game</th><th scope="col">Quarter</th>
+      <th scope="col">Status</th><th scope="col" class="num">In ad</th><th scope="col" class="num">Return</th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table><div id="empty"></div></div>
+  <div class="meta">
+    <span id="polled">Starting…</span>
+    <span id="delaynote"></span>
+  </div>
+  <div class="row">
+    <button id="wake" type="button" aria-pressed="false">Keep screen awake</button>
+  </div>
+  <p class="hint">Keep this tab open and in front: browsers slow background tabs, which breaks the prediction.</p>
+</main>
+<script type="module" src="tracker.js"></script>
+</body>
+</html>
